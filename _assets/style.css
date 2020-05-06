@@ -1,0 +1,203 @@
+/* VARIABLES */
+/* --------------------------------- */
+:root {
+  --social-codepen: #ffff;
+  --social-github: #6e5494;
+  --social-stack-overflow: #F48024;
+  --social-linkedin: #0077B5;
+  --social-twitter: #55acee;
+  --social-envelope: #B23121;
+  }
+  /* --------------------------------- */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+  } 
+  body {
+    position: relative;
+    background-color: #0E0E0E;
+    background-image: url('https://weborbit.ca/weborbit/portfolio/morpheus/_assets/img/morpheus-background-op.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .morpheus {
+    max-width: 300px;
+    position: absolute;
+    z-index: 97;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h1, h2 {
+    font-family: 'Courier New', monospace;
+    color: #32CD32;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 5vh;
+    margin: 0 10px;
+  }
+  h1 {
+    width: 100%;
+    position: absolute;
+    z-index: 98;
+    padding-top: 30px;
+    text-shadow: 2px 1px 1px #000;
+  }
+  h1::after {
+    display: inline;
+    content: '';
+    border-right: 4px solid #32CD32;
+    animation: blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  a {
+    color: rgba(0,0,0,0);
+    /*position: absolute;*/
+    height: 100px;
+    width: 150px;
+  }
+  .the-pill {
+    position: absolute;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  .the-pill:hover {
+    transform: scale(1.2);
+  }
+  #red {
+    top: 75%;
+    left: calc(50% - 300px);
+  }
+  #blue {
+    top: 75%;
+    right: calc(50% - 300px);
+  }
+  #vidContainer {
+    display: none;
+  }
+  .iframe {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+  }
+  .close-video {
+    color: #32CD32;
+    position: absolute;
+    top: 0;
+    right: calc(50% - 60px);
+    margin-top: 40px;
+    margin-right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 100;
+    transition-duration: 0.2s;
+  }
+  .close-video:hover {
+    transform: scale(1.2);
+  }
+  /* FOOTER */
+  /* --------------------------------- */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0 10px 0;
+  }
+  .footer-global div {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+    color: #32CD32;
+  }
+  .footer-global div a {
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    color: #32CD32;
+  }
+  .footer-global div a:hover {
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+  }
+  .social-icons {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .social-icons i {
+    font-size: 20px;
+    padding: 0px 15px;
+    transition-duration: 0.3s;
+    color: #32CD32;
+    text-shadow: 2px 1px 1px #000;
+  }
+  .footer-hover:hover {
+      -webkit-transform: scale(1.3) translateY(-5px);
+      -ms-transform: scale(1.3) translateY(-5px);
+      -o-transform: scale(1.3) translateY(-5px);
+      transform: scale(1.3) translateY(-5px);
+  }
+  .fa-codepen:hover {
+      color: var(--social-codepen);
+  }
+  .fa-github:hover {
+      color: var(--social-github);
+  }
+  .fa-stack-overflow:hover {
+      color: var(--social-stack-overflow);
+  }
+  .fa-linkedin-in:hover {
+      color: var(--social-linkedin);
+  }
+  .fa-twitter:hover {
+      color: var(--social-twitter);
+  }
+  .fa-envelope:hover {
+      color: var(--social-envelope);
+  }
+  
+  /* MEDIA */
+  /* ----------------------------- */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 7vw;
+    }
+    .the-pill {
+      transform: scale(0.8);
+    }
+    .the-pill:hover {
+      transform: scale(1);
+    }
+    #red {
+      top: 65%;
+      left: 0;
+    }
+    #blue {
+      top: 65%;
+      right: 0;
+    }
+    .close-video {
+      right: calc(50% - 45px);
+      margin-top: 20px;
+      margin-right: 20px;
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 400px) {
+    .morpheus {
+      max-width: 200px;
+    }
+  }
+  /* KEYFRAMES */
+  /* ----------------------------- */
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(50, 205, 50, 0.74);}
+    to{border-right-color: transparent;}
+  } 
